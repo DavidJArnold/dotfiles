@@ -87,8 +87,8 @@ export -f process
 walk () {
     COMMAND="$1"
     dir="$HOME"/dotfiles
-    fd -a -t f "^\.[a-z]+\.*" -H -E "\.git*" $dir -x bash -c "process $COMMAND {}"
-    fd -a -t f -p "\..*/" -H -E "\.git*" $dir -x bash -c "process $COMMAND {}"
+    fdfind -a -t f "^\.[a-z]+\.*" -H -E "\.git*" $dir -x bash -c "process $COMMAND {}"
+    fdfind -a -t f -p "\..*/" -H -E "\.git*" $dir -x bash -c "process $COMMAND {}"
 }
 
 print_opts () {

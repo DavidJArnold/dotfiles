@@ -49,4 +49,7 @@ return {
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make', cond = vim.fn.executable 'make' == 1 },
 
   { 'HallerPatrick/py_lsp.nvim' },
+
+  -- Glow for markdown preview
+  {"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
 }

@@ -20,7 +20,7 @@ install () {
 	fi
 
 	echo "[link]    $REST"
-	mkdir -p $REST
+	mkdir -p $LINK_DIR
 	ln -s "$TARGET" "$LINK"
 }
 export -f install

@@ -25,7 +25,7 @@ require('lazy').setup('plugins')
 -- Set tab size
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
-vim.o.expandtab = 4
+vim.o.expandtab = true
 
 -- Set highlight on search
 vim.o.hlsearch = false

@@ -1,3 +1,5 @@
+PATH=$PATH:$HOME/.local/bin
+
 eval "$(zoxide init zsh)"
 
 eval "$(starship init zsh)"

@@ -8,3 +8,4 @@
  - fd
  - ripgrep
  - a nerd font
+ - tmux, tmux plugin manager

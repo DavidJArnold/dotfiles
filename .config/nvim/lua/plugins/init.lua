@@ -72,5 +72,10 @@ return {
   --  dependencies = { 'MunifTanjim/nui.nvim', "nvim-lua/plenary.nvim" },
   --  opts = {}
   -- },
+
+  -- codesnap for screenshots
+  {
+      "mistricky/codesnap.nvim", build = "make", opts = {save_path = "~/codesnaps"}
+  },
 }
 }

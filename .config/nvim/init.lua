@@ -19,6 +19,13 @@ vim.g.maplocalleader = ' '
 
 require('lazy').setup('plugins')
 
+-- [[ Startup command ]]
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function ()
+    vim.cmd("Telescope find_files")
+  end,
+})
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 

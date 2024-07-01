@@ -37,6 +37,9 @@ vim.o.expandtab = true
 -- Set highlight on search
 vim.o.hlsearch = false
 
+-- Prevent cursor going too high/low
+vim.o.scrolloff = 5
+
 -- Make line numbers default
 vim.wo.number = true
 vim.o.relativenumber = true

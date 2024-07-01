@@ -9,3 +9,4 @@
  - ripgrep
  - a nerd font
  - tmux, tmux plugin manager
+ - eza, delta, dust, duf, bat, tldr

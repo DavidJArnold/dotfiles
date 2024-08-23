@@ -21,7 +21,7 @@ require('lazy').setup('plugins')
 
 -- [[ Startup command ]]
 vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function ()
+  callback = function()
     vim.cmd("Telescope find_files")
   end,
 })
@@ -366,6 +366,7 @@ cmp.setup {
 require("codesnap").setup({
   watermark = "",
   bg_padding = 0,
+  bg_color = "#282c34",
 })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

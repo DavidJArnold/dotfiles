@@ -1,6 +1,10 @@
 add_newline = true
 
 format = """
+$status\
+$cmd_duration\
+$line_break\
+$sudo\
 $python\
 $username\
 $hostname\
@@ -23,3 +27,17 @@ format = '(\($virtualenv\) )'
 style = "blue"
 truncation_length = 3
 truncate_to_repo = false
+
+[status]
+format = '[$status]($style) '
+# success symbol must be non-empty for module to show when no error occurs
+success_symbol = 'Y'
+map_symbol = true
+disabled = false
+
+[sudo]
+disabled = false
+format = '$symbol'
+
+[cmd_duration]
+format = '\(after [$duration]($style)\) '

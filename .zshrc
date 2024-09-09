@@ -17,3 +17,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -f "/home/david/.ghcup/env" ] && source "/home/david/.ghcup/env" # ghcup-env
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"

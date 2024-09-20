@@ -5,6 +5,8 @@ $status\
 $cmd_duration\
 $line_break\
 $sudo\
+$shell\
+$nix_shell\
 $python\
 $username\
 $hostname\
@@ -41,3 +43,14 @@ format = '$symbol'
 
 [cmd_duration]
 format = '\(after [$duration]($style)\) '
+
+[nix_shell]
+symbol = '❆ '
+format = '[$symbol]($style)'
+disabled = false
+
+[shell]
+zsh_indicator = ''
+bash_indicator = 'bash '
+format = '$indicator'
+disabled = false

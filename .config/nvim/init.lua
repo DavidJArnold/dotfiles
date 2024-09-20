@@ -360,13 +360,21 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    -- { name = 'copilot' },
   },
 }
 
 require("codesnap").setup({
   watermark = "",
   bg_padding = 0,
-  bg_color = "#282c34",
+  -- corner_radius = 0,
+  bg_colour = "#282c34ed",
 })
+
+-- require("copilot").setup({
+--   suggestion = { enabled = false },
+--   panel = { enabled = false },
+-- })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

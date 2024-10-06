@@ -80,36 +80,37 @@ return {
     "DavidJArnold/codesnap.nvim", build = "make", opts = { save_path = "~/codesnaps" }
   },
 
-  -- -- copilot
-  -- {
-  --   "zbirenbaum/copilot.lua",
-  --   cmd = "Copilot",
-  --   build = ":Copilot auth",
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("copilot").setup({})
-  --   end,
-  -- },
-  --
-  -- -- copilot cmp
-  -- {
-  --   "zbirenbaum/copilot-cmp",
-  --   config = function()
-  --     require("copilot_cmp").setup({})
-  --   end,
-  -- },
-  --
-  -- -- copilot chat
-  -- {
-  --   "CopilotC-Nvim/CopilotChat.nvim",
-  --   branch = "canary",
-  --   dpendencies = {
-  --     {"nvim-lua/plenary.nvim" },
-  --     { "zbirenbaum/copilot.lua" },
-  --   },
-  --   build = "make tiktoken",
-  --   opts = {
-  --     debug = true,
-  --   },
-  -- },
+  -- copilot
+  {
+    "zbirenbaum/copilot.lua",
+    build = ":Copilot auth",
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    },
+  },
+
+  -- copilot cmp
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function()
+      require("copilot_cmp").setup({})
+    end,
+  },
+
+  -- copilot chat
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "canary",
+    cmd = "CopilotChat",
+    dpendencies = {
+      {"nvim-lua/plenary.nvim" },
+      { "zbirenbaum/copilot.lua" },
+      { "zbirenbaum/copilot-cmp" },
+    },
+    build = "make tiktoken",
+    opts = {
+      debug = true,
+    },
+  },
 }

@@ -51,7 +51,7 @@ format = '[$symbol]($style)'
 disabled = false
 
 [shell]
-zsh_indicator = ''
-bash_indicator = 'bash '
+zsh_indicator = 'zsh'
+bash_indicator = ''
 format = '$indicator'
 disabled = false

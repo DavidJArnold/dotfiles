@@ -1,0 +1,37 @@
+TMUX
+
+Leader is ctrl + a
+
+Session commands:
+tmux: Start a new tmux session (-s to give it a name)
+tmux kill-ses -t <name>: Kill session called <name>
+<leader> + $: Rename the current session
+<leader> + d: Detach from current session
+tmux ls: List all sessions
+tmux a: Attach to last session (-t to attach to specific session)
+<leader> + w: Session and window preview
+<leader> + (: Move to previous sesion
+<leader> + ): Move to next session
+
+Window commands:
+<leader> + c: New window
+<leader> + ,: Rename window
+<leader> + &: Close window
+<leader> + p: Go to previous window
+<leader> + n: Go to next window
+<leader> + [09]: Select window by number
+
+Pane commands:
+<leader> + ;: Go to last active pane
+<leader> + -: New pane with horizontal split
+<leader> + \: New pane with vertical split
+<leader> + {: Move current pane left
+<leader> + }: Move current pane right
+<leader> + [hjkl]: Move to the pane to the [left/down/up/right]
+<leader> + [HJKL]: Move pane border to the [left/down/up/right]
+<leader> + o: Move to next pane
+<leader> + q + [09]: Move to pane by number
+<leader> + q: Show pane numbers
+<leader> + z: Toggle zoom on current pane
+<leader> + !: Convert pane to a window
+<leader> + x: Close current pane

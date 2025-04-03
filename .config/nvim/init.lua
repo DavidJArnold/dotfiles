@@ -364,6 +364,10 @@ cmp.setup {
   },
 }
 
+-- Enable diagnostic text
+-- Set this to false if using rachartier/tiny-inline-diagnostic.nvim
+vim.diagnostic.config({ virtual_text = true })
+
 require("codesnap").setup({
   watermark = "",
   bg_padding = 0,

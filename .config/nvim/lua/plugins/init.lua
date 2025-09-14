@@ -101,7 +101,7 @@ return {
   -- copilot chat
   {
     "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
+    branch = "main",
     cmd = "CopilotChat",
     dpendencies = {
       {"nvim-lua/plenary.nvim" },

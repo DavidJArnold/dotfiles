@@ -279,9 +279,8 @@ local servers = {
   -- clangd = {},
   -- gopls = {},
   pyright = {},
-  -- rust_analyzer = {},
+  rust_analyzer = {},
   -- ts_ls = {},
-
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
@@ -301,21 +300,15 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 require('mason').setup()
 
 -- Ensure the servers above are installed
-local mason_lspconfig = require 'mason-lspconfig'
+require('mason-lspconfig').setup { ensure_installed = vim.tbl_keys(servers) }
 
-mason_lspconfig.setup {
-  ensure_installed = vim.tbl_keys(servers),
-}
-
-mason_lspconfig.setup_handlers {
-  function(server_name)
-    require('lspconfig')[server_name].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = servers[server_name],
-    }
-  end,
-}
+for server_name, _ in pairs(servers) do
+  require('lspconfig')[server_name].setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    settings = servers[server_name],
+  }
+end
 
 -- Turn on lsp status information
 require('fidget').setup()
@@ -367,6 +360,7 @@ cmp.setup {
 -- Enable diagnostic text
 -- Set this to false if using rachartier/tiny-inline-diagnostic.nvim
 vim.diagnostic.config({ virtual_text = true })
+-- vim.diagnostic.config({ virtual_lines = { current_line = true } })
 
 require("codesnap").setup({
   watermark = "",
@@ -375,7 +369,7 @@ require("codesnap").setup({
   bg_colour = "#282c34ed",
 })
 
--- Open copilot chat 
+-- Open copilot chat
 -- This sets a keymap to start Copilot plugins
 vim.keymap.set('n', '<leader>cs', require("CopilotChat"))
 

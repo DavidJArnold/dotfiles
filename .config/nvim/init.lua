@@ -373,5 +373,8 @@ require("codesnap").setup({
 -- This sets a keymap to start Copilot plugins
 vim.keymap.set('n', '<leader>cs', require("CopilotChat"))
 
+-- Toggle file tree
+vim.keymap.set('n', '<leader>ft', '<Cmd>Neotree toggle<CR>');
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

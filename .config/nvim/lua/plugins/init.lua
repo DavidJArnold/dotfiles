@@ -124,4 +124,22 @@ return {
   --       vim.diagnostic.config({ virtual_text = false }) -- Only if needed in your configuration, if you already have native LSP diagnostics
   --   end
   -- },
+
+  -- file tree
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    keys = {
+      { "<leader>ft", "<cmd>Neotree toggle<cr>", desc = "Toggle file tree", },
+    },
+    opts = {
+      close_if_last_window = true,
+      enable_git_status = true,
+    },
+  },
 }
